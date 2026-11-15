@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Masthead</title>
+    <meta name="description" content="Design animated SVG banners and cards for your GitHub README in the browser. Fonts outlined to paths, light and dark files, no server." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2.5' y='2.5' width='11' height='11' fill='%23F6D21F' stroke='%2316150F'/%3E%3C/svg%3E" />
+    <script>
+      // Apply the saved editor theme before first paint.
+      try {
+        const t = localStorage.getItem('mh-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#stage">Skip to preview</a>
+    <header class="top">
+      <a class="brand" href="./" aria-label="Masthead, start over">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Masthead</span>
+      </a>
+      <p class="tagline">Animated SVG banners for your README. No server.</p>
+      <div class="top-actions">
+        <button type="button" class="btn ghost small" id="copy-link">Copy link</button>
+        <button type="button" class="btn icon theme" id="theme" aria-label="Switch editor to dark theme"></button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <nav class="rail panel" aria-label="Templates">
+        <h2 class="eyebrow">Templates</h2>
+        <div class="rail-list" id="rail" role="list"></div>
+      </nav>
+
+      <section class="stage" id="stage" aria-label="Preview" tabindex="-1">
+        <div class="stage-bar">
+          <div class="seg" role="group" aria-label="GitHub theme">
+            <button type="button" class="seg-btn" data-preview="light" aria-pressed="true">Light <span class="mono">#FFFFFF</span></button>
+            <button type="button" class="seg-btn" data-preview="dark" aria-pressed="false">Dark <span class="mono">#0D1117</span></button>
+          </div>
+          <label class="check-toggle"><input type="checkbox" id="rm-sim" /> <span>Preview with motion off</span></label>
+          <span class="mono dim" id="dims"></span>
+        </div>
+
+        <div class="gh" id="gh" data-theme="light">
+          <div class="gh-head">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"/></svg>
+            <span>README.md</span>
+          </div>
+          <div class="gh-body">
+            <div class="gh-art" id="art" aria-live="off"></div>
+          </div>
+        </div>
+
+        <div id="timeline"></div>
+
+        <div class="below">
+          <section class="panel checks" aria-labelledby="checks-h">
+            <h2 class="eyebrow" id="checks-h">GitHub check</h2>
+            <ul id="checks" class="check-list"></ul>
+          </section>
+          <section class="panel export" aria-labelledby="export-h">
+            <h2 class="eyebrow" id="export-h">Export</h2>
+            <div class="export-row">
+              <button type="button" class="btn primary" id="dl-both">Download light + dark</button>
+              <button type="button" class="btn" id="dl-light">light.svg</button>
+              <button type="button" class="btn" id="dl-dark">dark.svg</button>
+            </div>
+            <div class="snippet">
+              <div class="snippet-head">
+                <span class="field-label" id="snippet-l">README snippet</span>
+                <button type="button" class="btn small" id="copy-snippet">Copy snippet</button>
+              </div>
+              <pre class="mono" aria-labelledby="snippet-l"><code id="snippet"></code></pre>
+              <p class="note">Commit both files next to your README. Put links under the image in Markdown: GitHub ignores links inside an SVG.</p>
+            </div>
+            <div class="export-row">
+              <button type="button" class="btn small" id="json-out">Export JSON</button>
+              <label class="btn small file-btn">Import JSON<input type="file" id="json-in" accept="application/json,.json" /></label>
+              <span class="note">Run the same JSON in CI with <code>node bin/masthead.mjs</code>.</span>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <aside class="inspector panel" id="inspector" aria-label="Inspector"></aside>
+    </main>
+
+    <footer class="foot">
+      <span class="mono sig"><span class="brand-mark small" aria-hidden="true"></span> Murali · github.com/Murali1801</span>
+      <nav class="foot-links" aria-label="Author">
+        <a href="https://github.com/Murali1801">GitHub</a>
+        <button type="button" class="linkish" id="copy-email">Copy email</button>
+        <a href="https://github.com/Murali1801/masthead">Source</a>
+      </nav>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/app/main.ts"></script>
+  </body>
+</html>

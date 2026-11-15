@@ -1,0 +1,12 @@
+{
+  "name": "card-tonal",
+  "template": "card",
+  "alt": "Tonal: OKLCH colour scales with APCA + Tailwind v4 export",
+  "fields": {
+    "title": "Tonal",
+    "line": "OKLCH colour scales with APCA + Tailwind v4 export",
+    "stack": "TypeScript · OKLCH · APCA",
+    "illustration": "ramp"
+  },
+  "timing": { "duration": 6, "mode": "loop" }
+}

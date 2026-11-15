@@ -1,0 +1,12 @@
+{
+  "name": "card-masthead",
+  "template": "card",
+  "alt": "Masthead: Animated SVG banners for your README. No server.",
+  "fields": {
+    "title": "Masthead",
+    "line": "Animated SVG banners for your README. No server.",
+    "stack": "TypeScript · opentype.js · SVG",
+    "illustration": "plotter"
+  },
+  "timing": { "duration": 7, "mode": "loop" }
+}

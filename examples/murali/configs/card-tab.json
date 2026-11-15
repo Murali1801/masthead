@@ -1,0 +1,12 @@
+{
+  "name": "card-tab",
+  "template": "card",
+  "alt": "Tab: Split bills offline. No account, no server.",
+  "fields": {
+    "title": "Tab",
+    "line": "Split bills offline. No account, no server.",
+    "stack": "PWA · IndexedDB · TypeScript",
+    "illustration": "receipt"
+  },
+  "timing": { "duration": 6, "mode": "loop" }
+}

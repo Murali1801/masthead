@@ -1,0 +1,33 @@
+{
+  "name": "masthead",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design animated SVG banners and cards for your GitHub README. No server.",
+  "license": "MIT",
+  "author": "Muralidhar Acharya (https://github.com/Murali1801)",
+  "type": "module",
+  "bin": {
+    "masthead": "bin/masthead.mjs"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "examples": "node bin/masthead.mjs examples/murali/configs --out examples/murali"
+  },
+  "dependencies": {
+    "opentype.js": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "fast-xml-parser": "^5.12.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

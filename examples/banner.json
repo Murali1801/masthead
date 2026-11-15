@@ -1,0 +1,14 @@
+{
+  "name": "banner",
+  "template": "specimen",
+  "alt": "Masthead: animated SVG banners for your README",
+  "fields": {
+    "title": "Masthead",
+    "subtitle": "animated SVG banners for your README",
+    "label": "github.com/Murali1801/masthead",
+    "credit": true,
+    "grid": true,
+    "cursor": true
+  },
+  "timing": { "duration": 6, "mode": "once" }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "masthead-murali",
+  "template": "specimen",
+  "height": 220,
+  "alt": "Muralidhar Acharya, web and app developer in India",
+  "fields": {
+    "title": "Muralidhar Acharya",
+    "subtitle": "web + app developer · India",
+    "label": "github.com/Murali1801",
+    "credit": true,
+    "grid": true,
+    "cursor": true
+  },
+  "fonts": { "display": "schibsted-grotesk-700", "mono": "jetbrains-mono-400" },
+  "timing": { "duration": 6, "mode": "once" }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "card-sheet",
+  "template": "card",
+  "alt": "Sheet: Native-feel bottom sheet, zero dependencies",
+  "fields": {
+    "title": "Sheet",
+    "line": "Native-feel bottom sheet, zero dependencies",
+    "stack": "Web Component · TypeScript",
+    "illustration": "sheet"
+  },
+  "timing": { "duration": 6, "mode": "loop" }
+}
