@@ -17,7 +17,6 @@ import { Timeline } from './timeline.ts';
 import { $, copy, debounce, download, h, nextId, reducedMotion, store, toast } from './util.ts';
 
 /** TODO: replace with a real contact address before publishing. */
-const CONTACT_EMAIL = 'hello@example.com';
 
 let cfg: Config = decodeHash(location.hash) ?? defaultConfig('specimen');
 let preview: Variant = 'light';
@@ -422,9 +421,6 @@ $('#json-in').addEventListener('change', async (e) => {
 $('#copy-link').addEventListener('click', async () => {
   history.replaceState(null, '', `#c=${encodeHash(cfg)}`);
   toast((await copy(location.href)) ? 'Link copied. It holds the whole design.' : 'Copy failed');
-});
-$('#copy-email').addEventListener('click', async () => {
-  toast((await copy(CONTACT_EMAIL)) ? `Copied ${CONTACT_EMAIL}` : CONTACT_EMAIL);
 });
 
 const themeBtn = $('#theme');
