@@ -3,6 +3,8 @@
   <img src="./examples/murali/masthead-murali-light.svg" alt="Muralidhar Acharya, web and app developer in India. A banner made with Masthead." width="840">
 </picture>
 
+[![Tests](https://github.com/Murali1801/masthead/actions/workflows/ci.yml/badge.svg)](https://github.com/Murali1801/masthead/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-16150F)](LICENSE)
+
 <table>
   <tr>
     <td>
