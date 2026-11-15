@@ -16,7 +16,6 @@ import { listbox } from './listbox.ts';
 import { Timeline } from './timeline.ts';
 import { $, copy, debounce, download, h, nextId, reducedMotion, store, toast } from './util.ts';
 
-/** TODO: replace with a real contact address before publishing. */
 
 let cfg: Config = decodeHash(location.hash) ?? defaultConfig('specimen');
 let preview: Variant = 'light';

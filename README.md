@@ -29,7 +29,7 @@
 
 Design animated SVG banners for your GitHub README. No server, real fonts, light and dark files you own.
 
-**Live editor:** https://masthead.vercel.app (TODO: not deployed yet)
+**Live editor:** https://masthead-murali.vercel.app
 
 ## Quick start
 
